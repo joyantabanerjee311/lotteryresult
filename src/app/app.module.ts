@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainComponent } from './components/main/main.component';
+import { PdfsearchComponent } from './components/main/pdfsearch/pdfsearch.component';
+import { SafePipe } from './components/main/pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { MainComponent } from './components/main/main.component';
     FooterComponent,
     MainComponent,
     HomeComponent,
-    MainComponent
+    MainComponent,
+    PdfsearchComponent,
+    SafePipe
+    
   ],
   imports: [
     BrowserModule,

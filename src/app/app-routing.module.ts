@@ -4,6 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainComponent } from './components/main/main.component';
+import { PdfsearchComponent } from './components/main/pdfsearch/pdfsearch.component';
 
 const routes: Routes = [ 
 
@@ -11,7 +12,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     {path:'header',component:HeaderComponent},
     {path:'footer',component: FooterComponent},
-    {path:'main',component: MainComponent}
+    {path:'main',component: MainComponent},
+    {path:'pdfsearch', component: PdfsearchComponent}
 
 ];
 

@@ -1,0 +1,40 @@
+<div class="pdfsearch-container">
+
+  <!-- Upload Ticket -->
+  <div class="upload-section">
+    <h3>Upload Lottery Ticket</h3>
+    <input type="file" (change)="onFileUpload($event)" accept="image/*,application/pdf" />
+  </div>
+
+  <!-- Manual Entry -->
+  <div class="manual-entry">
+    <h3>Enter Lottery Numbers</h3>
+    <input type="text" [(ngModel)]="ticketNumbers[0]" placeholder="Enter number" />
+    <button (click)="onSearchNumbers()">Search</button>
+  </div>
+
+  <!-- Results -->
+  <div class="result-section">
+    <h3>Matched Numbers</h3>
+    <div *ngIf="matchedNumbers.length > 0; else noMatch">
+      <ul>
+        <li *ngFor="let num of matchedNumbers">
+          ✅ {{ num }}
+        </li>
+      </ul>
+      <p><strong>Prize:</strong> {{ prizeResult }}</p>
+      <p><strong>Tier:</strong> {{ prizeTier }}</p>
+    </div>
+    <ng-template #noMatch>
+      <p>No matched numbers yet.</p>
+    </ng-template>
+  </div>
+
+<!-- PDF Preview Section -->
+<div class="pdf-preview">
+  <h3>PDF Result Preview</h3>
+ <iframe [src]="pdfUrl | safe" width="100%" height="500px"></iframe>
+  <p *ngIf="!safePdfUrl">No PDF loaded.</p>
+</div>
+</div>
+
