@@ -4,9 +4,10 @@ import { LotteryService } from '../../../lottery.service';
 
 
 @Component({
-  selector: 'app-pdfsearch',
-  templateUrl: './pdfsearch.component.html',
-  styleUrls: ['./pdfsearch.component.css']
+    selector: 'app-pdfsearch',
+    templateUrl: './pdfsearch.component.html',
+    styleUrls: ['./pdfsearch.component.css'],
+    standalone: false
 })
 export class PdfsearchComponent {
   uploadedFile: File | null = null;
