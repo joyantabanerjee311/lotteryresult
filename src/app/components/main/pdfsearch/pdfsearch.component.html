@@ -1,16 +1,30 @@
 <div class="pdfsearch-container">
 
-  <!-- Upload Ticket -->
+    <!-- Lottery Ticket time -->
   <div class="upload-section">
-    <h3>Upload Lottery Ticket</h3>
-    <input type="file" (change)="onFileUpload($event)" accept="image/*,application/pdf" />
+    <h3>Select Lottery Ticket time</h3>
+        <div class="time-buttons">
+      <button class="time-button time1">1:00 PM</button>
+      <button class="time-button time2">6:00 PM</button>
+      <button class="time-button time3">8:00 PM</button>
+    </div>
   </div>
-
-  <!-- Manual Entry -->
+  <!-- PDF Preview Section -->
+<div class="pdf-preview">
+  <h3>PDF Result Preview</h3>
+ <iframe [src]="pdfUrl | safe" width="100%" height="500px"></iframe>
+  <p *ngIf="!safePdfUrl">No PDF loaded.</p>
+</div>
+    <!-- Manual Entry -->
   <div class="manual-entry">
     <h3>Enter Lottery Numbers</h3>
     <input type="text" [(ngModel)]="ticketNumbers[0]" placeholder="Enter number" />
     <button (click)="onSearchNumbers()">Search</button>
+  </div>
+  <!-- Upload Ticket -->
+  <div class="upload-section">
+    <h3>Upload Lottery Ticket</h3>
+    <input type="file" (change)="onFileUpload($event)" accept="image/*,application/pdf" />
   </div>
 
   <!-- Results -->
@@ -29,12 +43,5 @@
       <p>No matched numbers yet.</p>
     </ng-template>
   </div>
-
-<!-- PDF Preview Section -->
-<div class="pdf-preview">
-  <h3>PDF Result Preview</h3>
- <iframe [src]="pdfUrl | safe" width="100%" height="500px"></iframe>
-  <p *ngIf="!safePdfUrl">No PDF loaded.</p>
-</div>
 </div>
 

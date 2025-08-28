@@ -7,30 +7,30 @@
 .ad {
   width: 160px;
   background: #eee;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   position: relative;
 }
 
 .ad-left {
-  border-right: 1px solid #ccc;
+  border-right: 0px solid #ccc;
 }
 
 .ad-right {
-  border-left: 1px solid #ccc;
+  border-left: 0px solid #ccc;
 }
 
 .content {
   flex: 1;
-  padding: 30px;
+  padding: 10px;
   background: white;
   overflow-y: auto;
 }
 
 .ad-box {
   position: sticky;
-  top: 20px;
+  top: 10px;
   background-color: orange;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 60px;
 }
