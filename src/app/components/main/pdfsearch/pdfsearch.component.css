@@ -1,3 +1,4 @@
+
 .pdfsearch-container {
   padding: 20px;
   background: #fafafa;
@@ -23,6 +24,7 @@ input[type="text"] {
   margin-top: 10px;
   padding: 8px;
   width: 100%;
+  font-size: 1rem;
 }
 
 button {
@@ -33,24 +35,7 @@ button {
   color: white;
   border-radius: 4px;
   cursor: pointer;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-}
-
-.upload-section {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
+  font-size: 1rem;
 }
 
 h3 {
@@ -61,6 +46,7 @@ h3 {
   display: flex;
   gap: 40px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .time-button {
@@ -74,14 +60,66 @@ h3 {
 }
 
 .time1 {
-  background-color: #b8731a; /* Brownish-orange */
+  background-color: #b8731a;
 }
 
 .time2 {
-  background-color: #007BFF; /* Blue */
+  background-color: #007BFF;
 }
 
 .time3 {
-  background-color: #28A745; /* Green */
+  background-color: #28A745;
+}
+
+@media (max-width: 1024px) {
+  .pdfsearch-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .time-button {
+    font-size: 22px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdfsearch-container {
+    padding: 5px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .upload-section,
+  .manual-entry,
+  .result-section,
+  .pdf-preview {
+    margin-bottom: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: none;
+  }
+  .time-buttons {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .time-button {
+    font-size: 18px;
+    padding: 8px 12px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  input[type="file"],
+  input[type="text"] {
+    font-size: 0.95rem;
+  }
+  button {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
 }
 
