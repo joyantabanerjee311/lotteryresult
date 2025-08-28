@@ -3,14 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainComponent } from './components/main/main.component';
 import { PdfsearchComponent } from './components/main/pdfsearch/pdfsearch.component';
 import { SafePipe } from './components/main/pipes/safe.pipe';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -27,10 +25,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
-    PdfViewerModule
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent] // ✅ AppComponent must be bootstrapped
 })

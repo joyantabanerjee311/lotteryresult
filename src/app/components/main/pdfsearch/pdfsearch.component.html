@@ -12,7 +12,7 @@
   <!-- PDF Preview Section -->
 <div class="pdf-preview">
   <h3>PDF Result Preview</h3>
-<pdf-viewer [src]="pdfUrl" [render-text]="true" style="display: block;" [show-all]="true"></pdf-viewer>
+ <iframe [src]="pdfUrl | safe"></iframe>
 </div>
     <!-- Manual Entry -->
   <div class="manual-entry">
