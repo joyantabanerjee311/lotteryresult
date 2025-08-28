@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LotteryService } from '../../../lottery.service';
+
 
 @Component({
   selector: 'app-pdfsearch',
@@ -15,16 +17,17 @@ export class PdfsearchComponent {
   prizeResult: string = '';
   prizeTier: string = '';
 
-  constructor(private sanitizer: DomSanitizer) {}
-
-  onFileUpload(event: any) {
-    const file = event.target.files[0];
-    if (file && (file.type.includes('image') || file.type.includes('pdf'))) {
-      this.uploadedFile = file;
-      // Simulate a generated PDF preview URL
-      this.pdfUrl = 'https://example.com/lottery-result.pdf'; // replace with dynamic one
-      this.safePdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl);
-    }
+  constructor(private sanitizer: DomSanitizer, private lotteryService: LotteryService) {}
+// onTimeSelect(time: string) {
+//   // Example API call (replace with your actual service)
+//   this.lotteryService.getPdfUrlByTime(time).subscribe((url: string) => {
+//     this.pdfUrl = url;
+//   });
+// }
+  onTimeSelect(time: string) {
+    this.lotteryService.getPdfUrlByTime(time).subscribe((url: string) => {
+      this.pdfUrl = url;
+    });
   }
 
   onSearchNumbers() {

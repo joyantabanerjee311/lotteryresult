@@ -8,17 +8,36 @@
   box-shadow: 0 0 10px #ddd;
 }
 
-.upload-section,
+
 .manual-entry,
-.result-section,
-.pdf-preview {
+.result-section {
   margin-bottom: 30px;
   background: white;
   padding: 16px;
   border-radius: 6px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
+/* ...existing code... */
+.pdf-preview {
+  margin-bottom: 30px;
+  background: white;
+  padding: 0; /* Remove extra padding */
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  height: auto; /* Remove fixed height */
+  min-height: 80vh; /* Optional: make it fill most of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
+.pdf-preview iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+/* ...existing code... */
 input[type="file"],
 input[type="text"] {
   margin-top: 10px;

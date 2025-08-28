@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MainComponent } from './components/main/main.component';
 import { PdfsearchComponent } from './components/main/pdfsearch/pdfsearch.component';
 import { SafePipe } from './components/main/pipes/safe.pipe';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SafePipe } from './components/main/pipes/safe.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ],
   bootstrap: [AppComponent] // ✅ AppComponent must be bootstrapped
 })

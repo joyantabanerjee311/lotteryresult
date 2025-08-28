@@ -38,13 +38,8 @@
     font-size: 1.2rem;
   }
   .nav {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+     display: none;
   }
-  .nav a {
-    font-size: 1rem;
-    padding: 8px 0;
-  }
+
 }
 /* ...existing code... */
